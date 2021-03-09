@@ -14,13 +14,19 @@ jobs:
       - name: Write the message
         run: echo hello world
 
-  create-release:
-    name: Write hello, world on windows
+  create-artifact:
+    name: Create artifact
     runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: read
+          path: ./README.md
 
       # - name: Create release
       #   uses: ncipollo/release-action@v1
@@ -28,9 +34,5 @@ jobs:
       #     tag: demo
       #     token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: readme
-          path: ./README.md
+      
 
