@@ -25,5 +25,6 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
+          tag: demo
           token: ${{ secrets.GITHUB_TOKEN }}
 
