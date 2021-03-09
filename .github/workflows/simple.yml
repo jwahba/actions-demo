@@ -14,7 +14,7 @@ jobs:
       - name: Write the message
         run: echo hello world
 
-  hello-world:
+  create-release:
     name: Write hello, world on windows
     runs-on: windows-latest
 
