@@ -22,14 +22,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: demo
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Create release
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: demo
+      #     token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: upload
         uses: actions/upload-artifact@v2
-        name: my-artifact
+        name: readme
         path: ./README.md
 
