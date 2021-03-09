@@ -27,4 +27,9 @@ jobs:
         with:
           tag: demo
           token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: upload
+        uses: actions/upload-artifact@v2
+        name: my-artifact
+        path: ./README.md
 
