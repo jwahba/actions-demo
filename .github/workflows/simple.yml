@@ -14,3 +14,16 @@ jobs:
       - name: Write the message
         run: echo hello world
 
+  hello-world:
+    name: Write hello, world on windows
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create release
+        uses: actions/create-release@v1.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
