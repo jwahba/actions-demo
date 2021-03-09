@@ -1,0 +1,16 @@
+name: first_workflow
+
+on: push
+
+jobs:
+  hello-world:
+    name: Write hello, world
+    run-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Write the message
+        run: echo hello world
+
